@@ -1,0 +1,104 @@
+body {
+  font-family: 'Helvetica Neue', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  color: #111;
+}
+
+.page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.logo {
+  width: 140px;
+  margin-bottom: 5px;
+}
+
+.main-nav a {
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.main-nav a:visited {
+  color: #e50914;
+}
+
+main {
+  text-align: center;
+  flex-grow: 1;
+}
+
+h1 {
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.intro {
+  font-size: 1.1em;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.card {
+  background: #f9f9f9;
+  padding: 25px;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  display: inline-block;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input[type="file"],
+input[type="text"] {
+  margin: 10px 0;
+  padding: 8px;
+  width: 80%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #e50914;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: #b4080f;
+}
+
+footer {
+  text-align: center;
+  margin-top: 50px;
+  padding: 20px 0;
+  border-top: 1px solid #eee;
+}
+
+footer a {
+  color: #e50914;
+  text-decoration: none;
+  font-weight: bold;
+}

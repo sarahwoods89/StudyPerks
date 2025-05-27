@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= title %></title>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+  <div class="page">
+
+    <!-- HEADER -->
+    <header>
+      <img src="/images/studyperks-logo.png" alt="StudyPerks logo" class="logo" />
+      <nav class="main-nav">
+        <a href="/about">About</a>
+      </nav>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main>
+      <h1>Verify your student ID</h1>
+      <p class="intro">This is your gateway to unlocking verified discounts via Web3.<br>No codes. No stress. Just perks.</p>
+
+      <div class="card">
+        <form action="/verify" method="POST" enctype="multipart/form-data">
+          <label>Upload your student card or letter:</label><br>
+          <input type="file" name="studentCard" required><br>
+
+          <label>Enter your wallet address:</label><br>
+          <input type="text" name="walletAddress" required><br>
+
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+      <p>
+        Follow us on <a href="https://www.x.com/studyperkstoken" target="_blank">X @studyperkstoken</a>
+      </p>
+    </footer>
+    
+  </div>
+</body>
+</html>
