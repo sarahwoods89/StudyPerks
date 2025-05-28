@@ -8,37 +8,36 @@
   <div class="page">
 
     <!-- HEADER -->
-    <header>
-      <img src="/images/studyperks-logo.png" alt="StudyPerks logo" class="logo" />
-      <nav class="main-nav">
-        <a href="/about">About</a>
-      </nav>
-    </header>
+    <%- include('partials/header', { currentPage: 'home' }) %>
 
     <!-- MAIN CONTENT -->
     <main>
-      <h1>Verify your student ID</h1>
-      <p class="intro">This is your gateway to unlocking verified discounts via Web3.<br>No codes. No stress. Just perks.</p>
+  <h1>
+    We tokenize your student card<br>
+    so discounts are automatic at checkout
+  </h1>
+  <p>No codes. No hassle. Just perks.</p>
 
-      <div class="card">
-        <form action="/verify" method="POST" enctype="multipart/form-data">
-          <label>Upload your student card or letter:</label><br>
-          <input type="file" name="studentCard" required><br>
+  <div class="upload-section">
+    <img src="/images/halfRedLogo.png" alt="StudyPerks Logo Side" class="bg-watermark" />
 
-          <label>Enter your wallet address:</label><br>
-          <input type="text" name="walletAddress" required><br>
+    <div class="upload-form">
+      <form action="/verify" method="POST" enctype="multipart/form-data">
+        <label>Upload your student card or letter:</label><br>
+        <input type="file" name="studentCard" required><br><br>
 
-          <button type="submit">Submit</button>
-        </form>
-      </div>
-    </main>
+        <label>Enter your wallet address:</label><br>
+        <input type="text" name="walletAddress" required><br><br>
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+</main>
+    <br></br>
 
     <!-- FOOTER -->
-    <footer>
-      <p>
-        Follow us on <a href="https://www.x.com/studyperkstoken" target="_blank">X @studyperkstoken</a>
-      </p>
-    </footer>
+    <%- include('partials/footer') %>
     
   </div>
 </body>

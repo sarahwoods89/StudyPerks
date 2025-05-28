@@ -1,13 +1,52 @@
-<h1>What is StudyPerks?</h1>
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= title %></title>
+  <link rel="stylesheet" href="/stylesheets/style.css" />
+</head>
+<body>
+  <div class="page about-page">
 
-<p>StudyPerks is a token that will sit in your digital wallet and automate discounts you're entitled to at checkout. No more copying and pasting codes. No more hassle. Just perks.</p>
+    <!-- HEADER -->
+    <%- include('partials/header', { currentPage: 'about' }) %>
 
-<h2>How it works:</h2>
-<ol>
-  <li>Upload your student ID or University letter</li>
-  <li>Connect your wallet and get verified</li>
-  <li>Receive a StudyPerks token</li>
-  <li>Start to see discounts come to you at checkout...finally</li>
-</ol>
+    <!-- MAIN CONTENT -->
+    <main class="about-content">
 
-<a href="/">← Back to Home</a>
+      <div class="about-text">
+        <h2>How it works?</h2>
+        <div class="step-section">
+  <img src="/images/studentTakingSelfie.png" alt="Student taking selfie">
+  <div class="step-text">
+    <ol>
+      <li>Upload your student ID or university letter.</li>
+    </ol>
+  </div>
+</div>
+
+<div class="step-section">
+  <img src="/images/getVerified.png" alt="Phone showing verification">
+  <div class="step-text">
+    <ol start="2">
+      <li>Get verified.</li>
+      <li>Receive a StudyPerks token.</li>
+    </ol>
+  </div>
+</div>
+
+<div class="step-section">
+  <img src="/images/automaticDiscount.png" alt="Automatic checkout discount">
+  <div class="step-text">
+    <ol start="4">
+      <li>Enjoy automatic discounts at checkout. Yahoo.</li>
+    </ol>
+  </div>
+</div>
+
+      </div>
+    </main>
+
+     <%- include('partials/footer') %>
+
+</body>
+</html>

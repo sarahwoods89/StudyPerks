@@ -1,3 +1,4 @@
+/* Base Layout */
 body {
   font-family: 'Helvetica Neue', sans-serif;
   margin: 0;
@@ -15,27 +16,96 @@ body {
   min-height: 100vh;
 }
 
-header {
-  text-align: center;
-  margin-bottom: 20px;
+/* Red underline across full screen */
+.header-bar {
+  width: 100%;
+  border-bottom: 3px solid #e50914;
+  background: #fff;
+  padding: 0; /* Ensure no padding pushes content */
+  margin: 0;   /* Ensure no margin collapses width */
 }
 
+/* Centered inner content */
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
 .logo {
-  width: 140px;
-  margin-bottom: 5px;
+  height: 120px;
 }
 
 .main-nav a {
   color: black;
   font-weight: bold;
   text-decoration: none;
-  margin: 0 10px;
+  margin-left: 20px;
 }
 
 .main-nav a:visited {
-  color: #e50914;
+  color: #090909;
 }
 
+.main-nav a.active {
+  color: #e50914;
+  border-bottom: 2px solid #e50914;
+  padding-bottom: 4px;
+  transition: all 0.3s ease;
+}
+
+
+/* About Page Layout */
+.about-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.about-content h1 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.about-content h2 {
+  text-align: center;
+  width: 100%;
+}
+
+
+
+.about-text {
+  flex: 2;
+  padding: 60px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+
+.about-text h1 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+}
+
+.about-text .intro {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.about-text .how-it-works {
+  line-height: 1.8;
+  padding-left: 20px;
+  font-size: 1rem;
+}
+
+/* Main Content (Form, Buttons) */
 main {
   text-align: center;
   flex-grow: 1;
@@ -49,23 +119,75 @@ h1 {
 .intro {
   font-size: 1.1em;
   line-height: 1.6;
-  margin-bottom: 30px;
+  margin: 20px 0 30px;
+  color: #333;
 }
 
-.card {
-  background: #f9f9f9;
-  padding: 25px;
+.upload-form {
+  position: relative;
+  z-index: 1;
+  background: white;
+  padding: 30px;
+  max-width: 450px;
   margin: 0 auto;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  display: inline-block;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1); /* soft shadow */
+  border-radius: 8px;
 }
+
+.bg-watermark {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  opacity: 0.08;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
+
+.upload-form {
+  position: relative;
+  z-index: 1;
+  background: transparent;
+  padding: 20px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.card-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+.card-inner img.side-logo {
+  width: 240px; /* adjust as needed */
+  opacity: 0.2; /* to fade it into background */
+  position: absolute;
+  left: 20px;
+  top: 0;
+  z-index: 0; /* behind the form */
+}
+
+
+.card-inner form {
+  flex: 1;
+}
+
 
 form {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
+.form-content {
+  position: relative;
+  z-index: 2;
+  background: transparent;
+}
+
 
 input[type="file"],
 input[type="text"] {
@@ -90,10 +212,10 @@ button:hover {
   background-color: #b4080f;
 }
 
+/* Footer */
 footer {
   text-align: center;
-  margin-top: 50px;
-  padding: 20px 0;
+  padding: 20px;
   border-top: 1px solid #eee;
 }
 
@@ -102,3 +224,41 @@ footer a {
   text-decoration: none;
   font-weight: bold;
 }
+
+.step-section {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* keeps image + text aligned nicely */
+  width: 100%;
+  max-width: 1000px;         /* stretch further */
+  margin: 20px auto;
+  padding: 30px 40px;        /* increase padding inside the box */
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+}
+
+
+
+.step-section img {
+  max-width: 150px;
+  margin-right: 20px;
+}
+
+.step-text {
+  flex: 1;
+}
+
+
+.step-text ol {
+  padding-left: 20px;
+  margin: 0;
+}
+
+.step-text li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  color: #333;
+}
+
+

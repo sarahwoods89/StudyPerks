@@ -3,6 +3,13 @@ const router = express.Router();
 const multer = require('multer');
 const path = require('path');
 
+router.get('/', function(req, res) {
+  res.render('home', {
+    title: 'Home',
+    currentPage: 'home'
+  });
+});
+
 // Multer config for file uploads
 const storage = multer.diskStorage({
   destination: './uploads/',
@@ -12,14 +19,37 @@ const storage = multer.diskStorage({
 });
 const upload = multer({ storage });
 
-// Home page
-router.get('/', (req, res) => {
-  res.render('home', { title: 'Express' });
+router.get('/about', function(req, res) {
+  res.render('about', {
+    title: 'About | StudyPerks',
+    currentPage: 'about'
+  });
 });
 
-router.get('/about', (req, res) => {
-  res.render('about', { title: 'About StudyPerks' });
+
+router.get('/brands', function(req, res) {
+  res.render('brands', {
+    title: 'Brand Partners',
+    currentPage: 'brands'
+  });
 });
+
+router.get('/universities', function(req, res) {
+  res.render('universities', {
+    title: 'University Partners',
+    currentPage: 'universities'
+  });
+});
+
+
+
+router.get('/verify', function(req, res) {
+  res.render('verify', {
+    title: 'Verify | StudyPerks',
+    currentPage: 'verify'
+  });
+});
+
 
 
 // Handle student verification form

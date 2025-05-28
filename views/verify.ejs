@@ -1,3 +1,5 @@
+<%- include('partials/header', { currentPage: 'verify' }) %>
+
 <h2>Verify Your Student ID</h2>
 <form action="/verify" method="POST" enctype="multipart/form-data">
   <label for="studentCard">Upload your student card:</label><br>
@@ -8,3 +10,4 @@
 
   <button type="submit">Submit</button>
 </form>
+
