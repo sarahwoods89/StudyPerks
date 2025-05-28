@@ -58,7 +58,7 @@ body {
 
 @keyframes typing {
   from { width: 0; }
-  to { width: 30ch; } /* Adjust to length of your sentence */
+  to { width: 32ch; } /* Adjust to length of your sentence */
 }
 
 @keyframes blink {
