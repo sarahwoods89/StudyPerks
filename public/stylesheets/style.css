@@ -16,28 +16,18 @@ body {
   min-height: 100vh;
 }
 
-/* Red underline across full screen 
-.header-bar {
-  width: 100%;
-  border-bottom: 3px solid #e50914;
-  background: #fff;
-  margin: 0;
-  padding: 0;
-}*/
-
 .header-inner {
   width: 100%;
-  max-width: 1400px; /* Increase if you like */
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 0; /* Remove side padding */
+  padding: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-
 .header-bar {
-  padding: 20px 0; /* you can adjust top/bottom spacing here */
+  padding: 20px 0;
 }
 
 .tagline {
@@ -58,7 +48,7 @@ body {
 
 @keyframes typing {
   from { width: 0; }
-  to { width: 32ch; } /* Adjust to length of your sentence */
+  to { width: 32ch; }
 }
 
 @keyframes blink {
@@ -66,15 +56,10 @@ body {
   50% { border-color: #e50914; }
 }
 
-
-
-
-
 .logo {
-  height: 160px;        /* Increase size */
-  margin-top: -20px;    /* Pull it up slightly */
+  height: 160px;
+  margin-top: -20px;
 }
-
 
 .main-nav a {
   color: black;
@@ -94,7 +79,6 @@ body {
   transition: all 0.3s ease;
 }
 
-/* General Content */
 main {
   text-align: center;
   flex-grow: 1;
@@ -123,7 +107,6 @@ h1 {
   color: #333;
 }
 
-/* Upload Section Layout */
 .upload-form {
   position: relative;
   z-index: 1;
@@ -150,7 +133,6 @@ form {
   z-index: 1;
 }
 
-
 input[type="file"],
 input[type="text"] {
   margin: 10px 0;
@@ -176,7 +158,6 @@ button:hover {
   background-color: #b4080f;
 }
 
-/* Footer */
 footer {
   text-align: center;
   padding: 20px;
@@ -189,14 +170,11 @@ footer a {
   font-weight: bold;
 }
 
-/* About Page */
 .about-content {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
-
 
 .about-content h1 {
   text-align: center;
@@ -219,27 +197,29 @@ footer a {
 
 .step-section {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 100%;
-  max-width: 1100px; /* You can adjust this */
-  margin: 20px auto;
-  padding: 10px;
+  margin: 20px 0;
+  padding: 20px;
   background: none;
-box-shadow: none;
-border-radius: 0;
+  box-shadow: none;
+  border-radius: 0;
+  border-top: 1px solid #eee;
 }
-
 
 .step-section img {
-  max-width: 200px;
-  flex-shrink: 0;
-  margin-right: 20px;
+  width: 160px;
+  height: auto;
+  margin-bottom: 15px;
 }
 
-
 .step-text {
-  flex: 1;
+  font-size: 1.25rem;
+  line-height: 1.6;
+  text-align: center;
+  padding: 0 20px;
 }
 
 .step-text ol {
@@ -253,7 +233,6 @@ border-radius: 0;
   color: #333;
 }
 
-/* Default desktop styles (already written) */
 @media (max-width: 768px) {
   body {
     font-size: 1rem;
@@ -298,34 +277,34 @@ border-radius: 0;
   }
 
   .step-section {
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding: 10px 0;
-  width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 20px 0;
+    padding: 20px;
+    background: none;
+    box-shadow: none;
+    border-radius: 0;
+    border-top: 1px solid #eee;
   }
 
-  .step-section {
-  display: block;
-  text-align: center;
-  padding: 10px 0;
-}
-
-
   .step-section img {
-  width: 140px;
-  height: auto;
-  margin: 0 auto 10px;
-}
+    width: 160px;
+    height: auto;
+    margin-bottom: 10px;
+  }
 
   .step-text {
-  font-size: 1.15rem;
-  padding: 0 15px;
-  line-height: 1.6;
-}
+    font-size: 1.25rem;
+    padding: 0 15px;
+    line-height: 1.6;
+    text-align: center;
+  }
 
   .about-text {
-    padding: 20px 10px;
+    padding: 5px 5px;
     text-align: center;
   }
 
