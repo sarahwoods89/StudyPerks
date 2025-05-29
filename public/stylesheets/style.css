@@ -210,13 +210,13 @@ footer a {
 }
 
 .step-section img {
-  width: 160px;
+  width: 300px;
   height: auto;
   margin-bottom: 15px;
 }
 
 .step-text {
-  font-size: 1.25rem;
+  font-size: 2.25rem;
   line-height: 1.6;
   text-align: center;
   padding: 0 20px;
@@ -291,13 +291,13 @@ footer a {
   }
 
   .step-section img {
-    width: 160px;
+    width: 300px;
     height: auto;
     margin-bottom: 10px;
   }
 
   .step-text {
-    font-size: 1.25rem;
+    font-size: 2.25rem;
     padding: 0 15px;
     line-height: 1.6;
     text-align: center;
