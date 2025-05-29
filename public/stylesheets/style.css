@@ -252,3 +252,120 @@ footer a {
   font-size: 1rem;
   color: #333;
 }
+
+/* Default desktop styles (already written) */
+
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  .main-nav {
+    flex-direction: column;
+    gap: 10px;
+    text-align: left;
+  }
+
+  .logo {
+    height: 100px;
+    margin: 0 auto;
+  }
+
+  .tagline {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .step-section {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .step-section img {
+    margin: 0 auto 10px;
+  }
+
+  .step-text {
+    padding: 0;
+  }
+
+  .form-container {
+    width: 90%;
+    margin: 20px auto;
+  }
+
+  .form-container input,
+  .form-container button {
+    width: 100%;
+    margin: 10px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 0.95rem;
+  }
+
+  .header-inner {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+    text-align: center;
+  }
+
+  .main-nav {
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  .main-nav a {
+    margin: 0;
+    font-size: 1rem;
+  }
+
+  .logo {
+    height: 100px;
+    margin: 10px auto;
+  }
+
+  .tagline {
+    font-size: 1rem;
+    justify-content: center;
+    text-align: center;
+    padding: 0 10px;
+  }
+
+  .upload-form {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .step-section {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+  }
+
+  .step-section img {
+    margin: 0 auto 15px;
+  }
+
+  .about-text {
+    padding: 20px;
+    text-align: center;
+  }
+
+  input[type="file"],
+  input[type="text"],
+  button {
+    width: 100%;
+  }
+}
