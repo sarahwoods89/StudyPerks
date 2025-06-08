@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= title %></title>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+  <div class="page">
+
+    <!-- HEADER -->
+    <%- include('partials/header', { currentPage: 'home' }) %>
+
+    <!-- MAIN CONTENT -->
+    <main>
+  <h1>
+  We tokenize your student card<br class="break-mobile" />
+  <br>so discounts are automatic at checkout
+</h1>
+  <div class="tagline">
+  <p class="typewriter">No codes. No hassle. Just perks.</p>
+</div>
+  <br></br>
+  <div class="upload-form">
+  <img src="/images/halfRedLogo.png" alt="Watermark" class="bg-watermark" />
+
+  <form action="/verify" method="POST" enctype="multipart/form-data">
+    <label>Upload your student card or letter:</label><br>
+    <input type="file" name="studentCard" required><br><br>
+
+    <label>Enter your wallet address:</label><br>
+    <input type="text" name="walletAddress" required><br><br>
+
+    <button type="submit">Submit</button>
+  </form>
+</div>
+
+</main>
+    <br></br>
+
+    <!-- FOOTER -->
+    <%- include('partials/footer') %>
+    
+  </div>
+</body>
+</html>
